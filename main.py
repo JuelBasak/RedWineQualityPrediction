@@ -1,10 +1,10 @@
-from Flask import flask
+from flask import Flask, render_template
 
-app = flask(__name__)
+app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def homepage():
-    pass
+    return render_template('index.html')
 def predict():
     pass
 
