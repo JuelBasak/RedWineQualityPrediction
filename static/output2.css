@@ -14,7 +14,6 @@ body{
     background-repeat: no-repeat;
 }
 .container .details-form{
-    /* color: white; */
     background: white;
     margin-left: 25%;
     margin-right: 25%;
@@ -33,15 +32,11 @@ body{
     border-radius: 10px;
     font-family: 'Style Script', cursive;
 }
-.container .details-form .input-box{
-    margin: 20px;
+.container .title.sub_1{
+    color: green;
+    font-size: 100px;
 }
-input[type=number]{
-    border: none;
-    text-align: center;
-    border-bottom:1px solid black;
-    font-size: large;
-}
-.input-box .btn{
-    float: inline-end
+.container .title.sub_2{
+    color: blue;
+    font-size: 100px;
 }

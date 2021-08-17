@@ -24,8 +24,10 @@ def predict():
     model = joblib.load('./model/new_tree.pkl')
 
     prediction = model.predict([[fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol]])
-    print(prediction)
-    return render_template('index.html', prediction=prediction)
+    print(prediction[0])
+    if prediction[0] < 5:
+        return render_template('output1.html', prediction=prediction[0])
+    return render_template('output2.html', prediction=prediction[0])
 
      
 if __name__ == '__main__':
