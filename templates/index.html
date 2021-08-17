@@ -16,55 +16,76 @@
         <form action="/predict" method="POST">
             <div class="details-form form-group">
                 <div class="title">Enter Red Wine Details</div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="fixed acidity" name="fixed_acidity" step="0.01" required>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Fixed Acidity" name="fixed_acidity"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Volatile Acidity"
+                            name="volatile_acidity" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Citric Acid" name="citric_acid"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Residual Sugar"
+                            name="residual_sugar" step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Chlorides" name="chlorides"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Free Sulfur Dioxide"
+                            name="free_sulfur_dioxide" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Total Sulfur Dioxide"
+                            name="total_sulfur_dioxide" step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Density" name="density"
+                            step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter pH" name="pH" step="0.0001"
+                            required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Sulphates" name="sulphates"
+                            step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Alcohol" name="alcohol"
+                            step="0.0001" required>
+                    </div>
                 </div>
                 <div class="input-box">
-                    <input type="number" class="form-control" placeholder="volatile acidity" name="volatile_acidity"
-                        step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="citric acid" name="citric_acid" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="residual sugar" name="residual_sugar" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="chlorides" name="chlorides" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="free sulfur dioxide" name="free_sulfur_dioxide"
-                        step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="total sulfur dioxide"
-                        name="total_sulfur_dioxide" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="density" name="density" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="pH" name="pH" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="sulphates" name="sulphates" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" class="form-control" placeholder="alcohol" name="alcohol" step="0.01" required>
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="btn btn-primary" placeholder="alcohol" value="Predict">
+                    <input type="submit" class="btn btn-primary" value="Predict">
                 </div>
             </div>
         </form>
-        
-        
-        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-
 </body>
-
 </html>
