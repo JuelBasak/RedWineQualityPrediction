@@ -4,10 +4,12 @@ import joblib
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
+@cross_origin()
 def homepage():
     return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
+@cross_origin()
 def predict():
     fixed_acidity = request.form['fixed_acidity']
     volatile_acidity = request.form['volatile_acidity']
@@ -31,4 +33,4 @@ def predict():
 
      
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=false)
