@@ -1,12 +1,22 @@
+# Importing the required libraries
 from flask import Flask, render_template, request
 import joblib
 
+#Creating the Flask app
 app = Flask(__name__)
 
+# Returing the homepage when this API's Endpoint is hit
 @app.route('/', methods=['GET'])
 def homepage():
-    print('Working on homepage method')
     return render_template('index.html')
+
+"""
+This is the predict method which predicts the quality of the Red Wine. 
+The data is read from the homepage's form and is stored in this API. 
+The prediction model is loaded (Decision Tree in this case) and the stored
+values are passed into the model and the model returns the predicted value.
+This predicted value is passed to the output Webpage and the result is shown using Jinja. 
+"""
 
 @app.route("/predict", methods=['POST'])
 def predict():
