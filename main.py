@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 @cross_origin()
 def homepage():
+    print('Working on homepage method')
     return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
@@ -27,7 +28,6 @@ def predict():
     model = joblib.load('./model/new_tree.pkl')
 
     prediction = model.predict([[fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol]])
-    print(prediction[0])
     if prediction[0] < 5:
         return render_template('output1.html', prediction=prediction[0])
     return render_template('output2.html', prediction=prediction[0])
