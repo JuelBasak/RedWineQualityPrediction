@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def homepage():
     print('Working on homepage method')
-    return render_template('index.html')
+    return render_template('test.html')
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -31,4 +31,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=False)
