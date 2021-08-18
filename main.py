@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from flask_cors import cross_origin
 import joblib
 
 app = Flask(__name__)
@@ -33,4 +34,4 @@ def predict():
 
      
 if __name__ == '__main__':
-    app.run(debug=false)
+    app.run(debug=False)
