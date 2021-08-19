@@ -40,7 +40,7 @@ input[type=number]{
     border: none;
     text-align: center;
     border-bottom:1px solid black;
-    font-size: large;
+    font-size: 3px;
 }
 .input-box .btn{
     float: inline-end
