@@ -1,54 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <title>Red Wine Quality Prediction</title>
 </head>
+
 <body>
     <div class="container">
-        <form action="">
-            <div class="details-form">
+        <form action="/predict" method="POST">
+            <div class="details-form form-group">
                 <div class="title">Enter Red Wine Details</div>
-                <div class="input-box">
-                    <input type="text" placeholder="fixed acidity" required>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Fixed Acidity (Eg: 4.6-15.9)" name="fixed_acidity"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Volatile Acidity (Eg: 0.12-1.58)"
+                            name="volatile_acidity" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Citric Acid (Eg: 0.0-1.0)" name="citric_acid"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Residual Sugar (Eg: 0.9-15.5)"
+                            name="residual_sugar" step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Chlorides (Eg: 0.012-0.611)" name="chlorides"
+                            step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Free Sulfur Dioxide (Eg: 1.0-72.0)"
+                            name="free_sulfur_dioxide" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Total Sulfur Dioxide (Eg: 6.0-289.0)"
+                            name="total_sulfur_dioxide" step="0.0001" required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Density (Eg: 0.99007-1.00369)" name="density"
+                            step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter pH (Eg: 2.74-4.01)" name="pH" step="0.0001"
+                            required>
+                    </div>
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Sulphates (Eg: 0.33-2.0)" name="sulphates"
+                            step="0.0001" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box col">
+                        <input type="number" class="form-control" placeholder="Enter Alcohol (Eg: 8.4-14.9)" name="alcohol"
+                            step="0.0001" required>
+                    </div>
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="volatile acidity" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="citric acid" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="residual sugar" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="chlorides" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="free sulfur dioxide" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="total sulfur dioxide" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="density" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="pH" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="sulphates" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="alcohol" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="alcohol" required>
+                    <input type="submit" class="btn btn-primary" value="Predict">
                 </div>
             </div>
         </form>
     </div>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <span class="navbar-text">
+            Made by Biswajit. Git Link- <a
+                href="https://github.com/JuelBasak/RedWineQualityPrediction.git" target="_blank">https://github.com/JuelBasak/RedWineQualityPrediction.git</a>
+        </span>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

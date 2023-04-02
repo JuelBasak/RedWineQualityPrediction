@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(180deg, rgb(179, 59, 179), rgb(233, 155, 233));
+    background-repeat: no-repeat;
+}
+.container .details-form{
+    /* color: white; */
+    background: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    border:  2px solid black;
+} 
+.container{
+    padding: 5%;
+}
+.container .title{
+    font-size: 50px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Style Script', cursive;
+}
+.container .details-form .input-box{
+    margin: 20px;
+}
+input[type=number]{
+    border: none;
+    text-align: center;
+    border-bottom:1px solid black;
+    font-size: 15px;
+}
+.input-box .btn{
+    float: inline-end
+}
